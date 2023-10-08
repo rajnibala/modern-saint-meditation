@@ -2,27 +2,40 @@ from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 PROGRAMS = [
   {
-    'id': 1,
-    'title': 'Program1',
-    'Package': 'Bengaluru, India',
-    'Fees': 'Rs. 5,000'
+    'Program': 1,
+    'title': 'Personal online meditation classes alternate days',
+    'Location': 'Remote',
+    'Fees': 'Rs. 2999/-'
   },
   {
     'id': 2,
-    'title': 'Program2',
-    'Package': 'Delhi, India',
-    'Fees': 'Rs. 1500'
+    'title': 'Online group classes of (3-5) alt days',
+    'Location': 'Remote',
+    'Fees': 'Rs. 999/-'
   },
   {
     'id': 3,
-    'title': 'Program3',
-    'Package': 'Remote'
+    'title': 'Personal Counselling',
+    'Location': 'Remote',
+    'Fees': 'Rs. 999/-'
   },
   {
     'id': 4,
-    'title': 'Programs4',
-    'Package': 'San Francisco, USA',
-    'Fees': '1500'
+    'title': 'Relationships Counselling',
+    'Location': 'Remote',
+    'Fees': 'Rs. 999/-'
+  },
+  {
+    'id': 5,
+    'title': 'Parental Counselling',
+    'Location': 'Remote',
+    'Fees': 'Rs. 999/-'
+  },
+  {
+    'id': 6,
+    'title': 'Child Counselling',
+    'Location': 'Remote',
+    'Fees': 'Rs. 999/-'
   }
 ]
 
