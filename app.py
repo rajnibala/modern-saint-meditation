@@ -17,25 +17,25 @@ PROGRAMS = [
     'id': 3,
     'title': 'Personal Counselling',
     'Location': 'Remote',
-    'Fees': 'Rs. 999/-'
+    'Fees': 'Rs. 599/-'
   },
   {
     'id': 4,
     'title': 'Relationships Counselling',
     'Location': 'Remote',
-    'Fees': 'Rs. 999/-'
+    'Fees': 'Rs. 599/-'
   },
   {
     'id': 5,
     'title': 'Parental Counselling',
     'Location': 'Remote',
-    'Fees': 'Rs. 999/-'
+    'Fees': 'Rs. 599/-'
   },
   {
     'id': 6,
     'title': 'Child Counselling',
     'Location': 'Remote',
-    'Fees': 'Rs. 999/-'
+    'Fees': 'Rs. 599/-'
   }
 ]
 
