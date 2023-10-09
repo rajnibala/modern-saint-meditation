@@ -144,7 +144,7 @@
        <div class="col-md-6">
 <h2 class= "text-center mt-2 mb-4" >Why Mental Health is Importent ?</h2>
          
-     <p class="lead" style="color:black;">
+     <p class="text-justify mt-2 mb-4lead " style="color:black;">
        Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning. Prioritizing mental health is essential to foster resilience, cope with challenges, and experience life's joys. Just as physical health demands attention, nurturing mental health through self-care, support, and awareness is crucial for a balanced and fulfilling existence.
      </p>
        </div>
@@ -152,13 +152,14 @@
        <div class=" d-md-block col-md-6">
        <img src="static/chakra.jpeg" style="height:320px;border-radius:4px; margin-top:16px;">
          </div>
- {% include 'Blogs.html' %}
+
       <h2 class= "text-center mt-2 mb-4">Open Programs</h2>
    <div>
 {% for Programs in Programs %}
 {% include 'Programs.html' %}
 {% endfor %}
    </div>
+        {% include 'Blogs.html' %}
        <h2 class= "text-center mt-2 mb-4">Book an Appointment</h2>
    <div class= "text-center"> Just as physical health demands attention, nurturing mental health through self-care, support, and awareness is crucial for a balanced and fulfilling existence. </div>
  
