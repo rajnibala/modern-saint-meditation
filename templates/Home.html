@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>Modern Saint Meditation</title>
-  
+
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  
+
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -63,7 +63,7 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="form-validation.css" rel="stylesheet">
 <style>
@@ -118,40 +118,45 @@
     font-size:20px;
     color: white;
     font-weight: bold;
-    
+
   }
 </style>
   <style>
- #banner {
-        height: 360px;
-        width: 100%;
-        object-fit:cover;
-        margin-bottom: 16px;
-}
+    #banner {
+      height: 360px;
+      width: 100%;
+      object-fit: cover;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
  </style>
- 
+
 </head>
  <body> 
-       
+
    {% include 'nav.html' %}
    <img class="img-fluid" id="banner" src="https://modern-saint-meditation--rajni-balabala.repl.co/static/meditationbg.jpeg" style="height:620px;border-radius:4px; margin-top:28px;>
    <div class="container">
 
-     
+
    <h1 class= "text-center">Namaskaram! Modern Saint Meditation Welcomes you!</h1>
 
      <div class="row" style="margin-bottom:32px">
        <div class="col-md-6">
 <h2 class= "text-center mt-2 mb-4" >Why Mental Health is Importent ?</h2>
-         
+
      <p class="text-justify mt-2 mb-4lead " style="color:black;">
        Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning. Prioritizing mental health is essential to foster resilience, cope with challenges, and experience life's joys. Just as physical health demands attention, nurturing mental health through self-care, support, and awareness is crucial for a balanced and fulfilling existence.
      </p>
        </div>
        <!-- <div class="d-none d-md-block col-md-6"> write d-none if dont want images in medium devices --> 
-       <div class=" d-md-block col-md-6">
-       <img src="static/chakra.jpeg" style="height:320px;border-radius:4px; margin-top:16px;">
+       
+       <div id="banner-container">
+           <img class="img-fluid" id="banner" src="https://modern-saint-meditation--rajni-balabala.repl.co/static/bowl.jpeg" alt="Meditation Background Image">
          </div>
+      
 
       <h2 class= "text-center mt-2 mb-4">Open Programs</h2>
    <div>
@@ -162,14 +167,125 @@
         {% include 'Blogs.html' %}
        <h2 class= "text-center mt-2 mb-4">Book an Appointment</h2>
    <div class= "text-center"> Just as physical health demands attention, nurturing mental health through self-care, support, and awareness is crucial for a balanced and fulfilling existence. </div>
- 
+
 
      <div class="text-center mt-2 mb-4">
   <a class="btn btn-primary btn-lg"
     href="mailto: modernsaintmeditation1221@gmail.com ?subject=Question's%20about%20Programs&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Contact%20Number%20%3A%20%3CYour%20contact%20number%20here%20%3A%20Optional%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3CWrite%20your%20Questions%20here%3E%0D%0A%0D%0A%3CNote%20%3A%20%22Please%20don't%20hesitate%20to%20ask%20any%20questions.%20Your%20comfort%20is%20important%2C%20and%20we're%20here%20to%20help.%22%3E%0D%0A%0D%0A%0D%0A">Ask US</a>
      </div>
-       
+
       </div>
         {% include 'footer.html' %}
  </body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Saint Meditation</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /* Add margins to the header */
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            margin: 16px;
+        }
+
+        /* Other existing styles... */
+
+        /* Updated #banner style with specific margins */
+        #banner {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+
+        /* Add margins to the container */
+        .container {
+            margin: 16px;
+        }
+
+        /* Add margins to the row */
+        .row {
+            margin-bottom: 32px;
+        }
+
+        /* Add margins to the content inside the row */
+        .col-md-6,
+        .text-center {
+            margin: 16px;
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <h1>Header</h1>
+</div>
+
+{% include 'nav.html' %}
+<img class="img-fluid" id="banner"
+     src="https://modern-saint-meditation--rajni-balabala.repl.co/static/meditationbg.jpeg"
+     style="height:620px;border-radius:4px; margin-top:28px;">
+<div class="container">
+    <h1 class="text-center">Namaskaram! Modern Saint Meditation Welcomes you!</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text-center mt-2 mb-4">Why Mental Health is Important?</h2>
+            <p class="text-justify mt-2 mb-4lead" style="color:black;">
+                Mental health holds paramount significance as it profoundly influences our overall well-being and
+                quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and
+                daily functioning. Prioritizing mental health is essential to foster resilience, cope with challenges,
+                and experience life's joys. Just as physical health demands attention, nurturing mental health through
+                self-care, support, and awareness is crucial for a balanced and fulfilling existence.
+            </p>
+        </div>
+
+        <div id="banner-container">
+            <img class="img-fluid" id="banner" src="https://modern-saint-meditation--rajni-balabala.repl.co/static/bowl.jpeg" alt="Meditation Background Image">
+        </div>
+
+        <h2 class="text-center mt-2 mb-4">Open Programs</h2>
+        <div>
+            {% for Programs in Programs %}
+            {% include 'Programs.html' %}
+            {% endfor %}
+        </div>
+
+        {% include 'Blogs.html' %}
+
+        <h2 class="text-center mt-2 mb-4">Book an Appointment</h2>
+        <div class="text-center">
+            Just as physical health demands attention, nurturing mental health through self-care, support, and awareness
+            is crucial for a balanced and fulfilling existence.
+        </div>
+
+        <div class="text-center mt-2 mb-4">
+            <a class="btn btn-primary btn-lg"
+               href="mailto: modernsaintmeditation1221@gmail.com ?subject=Question's%20about%20Programs&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Contact%20Number%20%3A%20%3CYour%20contact%20number%20here%20%3A%20Optional%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3CWrite%20your%20Questions%20here%3E%0D%0A%0D%0A%3CNote%20%3A%20%22Please%20don't%20hesitate%20to%20ask%20any%20questions.%20Your%20comfort%20is%20important%2C%20and%20we're%20here%20to%20help.%22%3E%0D%0A%0D%0A%0D%0A">Ask
+                US</a>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</div>
+</body>
 </html>
