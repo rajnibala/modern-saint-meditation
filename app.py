@@ -3,39 +3,39 @@ app = Flask(__name__)
 PROGRAMS = [
   {
     'Program': 1,
-    'title': 'Personal online meditation classes alternate days',
-    'Location': 'Remote',
+    'title': 'Personal Meditation Classes',
+    'Location': 'Online',
     'Fees': 'Rs. 2999/-'
   },
   {
     'id': 2,
-    'title': 'Online group classes of (3-5) alt days',
-    'Location': 'Remote',
+    'title': 'Group Meditation Classes',
+    'Location': 'Online',
     'Fees': 'Rs. 999/-'
   },
   {
     'id': 3,
     'title': 'Personal Counselling',
-    'Location': 'Remote',
-    'Fees': 'Rs. 599/-'
+    'Location': 'Online',
+    'Fees': 'Rs. 899/-'
   },
   {
     'id': 4,
-    'title': 'Relationships Counselling',
-    'Location': 'Remote',
-    'Fees': 'Rs. 599/-'
+    'title': 'Relationship Counselling',
+    'Location': 'Online',
+    'Fees': 'Rs. 899/-'
   },
   {
     'id': 5,
     'title': 'Parental Counselling',
-    'Location': 'Remote',
-    'Fees': 'Rs. 599/-'
+    'Location': 'Online',
+    'Fees': 'Rs. 899/-'
   },
   {
     'id': 6,
-    'title': 'Child Counselling',
-    'Location': 'Remote',
-    'Fees': 'Rs. 599/-'
+    'title': 'Student Counselling',
+    'Location': 'Online',
+    'Fees': 'Rs. 899/-'
   }
 ]
 
