@@ -1,101 +1,31 @@
-/* Apply a responsive design to the entire page */
-body {
-    max-width: 100%;
-    margin: 0 auto;
+/* Updated styles for social icons */
+.social-icons, footer .nav {
+    list-style: none;
     padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Style the navigation bar */
-nav {
-    background-color: #333;
-    padding: 10px;
+.social-icons li, footer .nav li {
+    display: inline-block;
 }
 
-/* Style the unordered list in the navigation bar */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the list items in the navigation bar */
-li {
-    display: inline;
-    margin-right: 20px;
-}
-
-/* Style the links in the navigation bar */
-a {
+.social-icons a, footer .nav a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
 }
 
-/* Apply responsive design to make containers adjust to screen size */
-.container {
-    width: 100%;
-    max-width: 1200px; /* You can adjust this max-width according to your design */
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+/* Adjust the size of the icons */
+.social-icons img, footer .nav svg {
+    width: 24px;
+    height: 24px;
 }
 
-/* Example of a responsive image */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Example of a responsive text size */
-p {
-    font-size: 16px;
-}
-
-/* Your existing styles */
-
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.main {
-    padding: 20px;
-}
-
-/* New styles for responsiveness */
-
+/* Adjust styles for smaller screens */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .main {
-        padding: 10px;
-    }
-
-    /* Styles for navigation bar icons on smaller screens */
-    .navbar svg {
+    .social-icons img, footer .nav svg {
         width: 20px;
         height: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .main {
-        padding: 5px;
     }
 }

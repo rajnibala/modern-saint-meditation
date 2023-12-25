@@ -11,8 +11,8 @@
         }
 
         .navbar {
-            background-color: #343a40; /* Dark background color for the navigation bar */
-            padding: 10px 20px;
+            background-color: transparent;
+            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -21,22 +21,26 @@
         .logo {
             display: flex;
             align-items: center;
+            margin-bottom: auto;
         }
 
         .logo img {
-            height: 40px;
+            height: 100px;
             width: auto;
             margin-right: 10px;
         }
 
         .site-name {
-            color: white;
-            font-size: 18px;
+            color: black;
+            font-size: 38px;
+          align-items: center;
             font-weight: bold;
+          margin: auto;
         }
 
-        .Center-items {
+        .nav {
             display: flex;
+            flex-direction: column; /* Updated to column direction */
             gap: 20px;
         }
 
@@ -46,15 +50,63 @@
             font-weight: bold;
         }
 
-        .nav {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px;
-        }
-
         .nav a {
             text-decoration: none;
+            color: black;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-direction: column; /* Updated to column direction */
+            gap: 10px;
+            margin-top: auto; /* Push social icons to the bottom */
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: Black;
+          align-items: center;
+        }
+
+        /* Hidden sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
             color: white;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
         }
     </style>
     <!-- Include the SVG icons -->
@@ -64,37 +116,36 @@
 </head>
 
 <body>
-    <!-- fixed-top for fixing the top and bg-white or dark for changing color-->
     <nav class="navbar">
         <div class="logo">
             <img src="static/hd_logo_MSM__6_-removebg-preview.png" alt="Logo">
             <div class="site-name">Modern Saint Meditation</div>
         </div>
-        <div class="Center-items">
-            <a href="https://docs.google.com/forms/d/1NsqUkUNPdMr_R7p_fzfaXTOsE7DbnubX_-eWtR7hS2g/edit?pli=1">Appointment</a>
-            <a
-                href="mailto:modernsaintmeditation1221@gmail.com?subject=Question's%20about%20Programs&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Contact%20Number%20%3A%20%3CYour%20contact%20number%20here%20%3A%20Optional%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3CWrite%20your%20Questions%20here%3E%0D%0A%0D%0A%3CNote%20%3A%20%22Please%20don't%20hesitate%20to%20ask%20any%20questions.%20Your%20comfort%20is%20important%2C%20and%20we're%20here%20to%20help.%22%3E%0D%0A%0D%0A%0D%0A">Ask
-                Us</a>
-        </div>
-        <!-- Add a class to the ul for spacing -->
-        <ul class="nav col-md-2 justify-content-end list-unstyled d-flex spacing">
-            <li class="ms-3">
-                <a class="text-muted" href="https://instagram.com/modernsaintmeditation?igshid=MzRlODBiNWFlZA==">
-                    <svg class="bi" width="24" height="24" style="fill: white;"><use xlink:href="#instagram" /></svg>
-                </a>
-            </li>
-            <li class="ms-3">
-                <a class="text-muted" href="https://www.facebook.com/modernsaintmed/">
-                    <svg class="bi" width="24" height="24" style="fill: white;"><use xlink:href="#facebook" /></svg>
-                </a>
-            </li>
-            <li class="ms-3">
-                <a class="text-muted" href="https://youtube.com/@ModernSaintMeditation1001">
-                    <svg class="bi" width="24" height="24" style="fill: white;"><use xlink:href="#youtube" /></svg>
-                </a>
-            </li>
-        </ul>
+      <button class="openbtn" onclick="openNav()" style="background-color: transparent; color: black; font-size: 30px; padding: 10px; font-weight: bold;">☰ MENU </button>
+
+
+
+
     </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Home</a>
+      <a href="https://docs.google.com/forms/d/1NsqUkUNPdMr_R7p_fzfaXTOsE7DbnubX_-eWtR7hS2g/edit?pli=1">Appointment</a>
+      <a href="mailto:modernsaintmeditation1221@gmail.com?subject=Question's%20about%20Programs&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Contact%20Number%20%3A%20%3CYour%20contact%20number%20here%20%3A%20Optional%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3CWrite%20your%20Questions%20here%3E%0D%0A%0D%0A%3CNote%20%3A%20%22Please%20don't%20hesitate%20to%20ask%20any%20questions.%20Your%20comfort%20is%20important%2C%20and%20we're%20here%20to%20help.%22%3E%0D%0A%0D%0A%0D%0A">Ask Us</a>
+        </div>
+         <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
 </body>
 
 </html>
