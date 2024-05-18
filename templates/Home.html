@@ -1,190 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Saint Meditation</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-        crossorigin="anonymous">
-  <!-- Existing social icons styles -->
-  <style>
-      /* Updated styles for social icons */
-      .social-icons {
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          margin-top: auto;
-          justify-content: center; /* Center the social icons horizontally */
-      }
-
-      .social-icons a {
-          text-decoration: none;
-          color: white;
-          display: inline-block; /* Ensure icons are displayed in a row */
-      }
-  
-        /* Add some basic styling for the navigation bar */
-        .navbar {
-            background-color: white;
-            padding: 12px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Add spacing between items */
-        .navbar a,
-        .navbar button {
-            margin: 8px 15px;
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-
-        /* Style for the search bar */
-        .search-bar {
-            flex: 0.48;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-input {
-            width: 50%;
-            padding: 8px;
-            font-size: 12px;
-            border: none;
-            border-radius: 4px;
-        }
-
-        /* Style for the logo and site name */
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 180px;
-            height: 160px;
-            margin-right: 15px;
-        }
-
-        .site-name {
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Slideshow styles */
-        #slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-
-        .slides {
-            display: none;
-            width: 100%;
-            height: 420px;
-            border-radius: 4px;
-            margin: auto;
-        }
-
-        .container {
-            /* Add your existing container styles here */
-        }
-
-        .text-center {
-            /* Add your existing text-center styles here */
-        }
-
-        .btn-primary {
-            /* Add your existing btn-primary styles here */
-        }
-
-        /* Updated styles for social icons */
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-            justify-content: center; /* Center the social icons horizontally */
-        }
-        .social-icons a {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Modern Saint Meditation offers personalized meditation programs to enhance your mental health and well-being. Join our sessions to combat anxiety, depression, and more.">
+    <meta name="keywords" content="meditation, mental health, anxiety, depression, mindfulness, wellness, meditation programs">
 </head>
 <body>
-    {% include 'nav.html' %}
-    <!-- Slideshow container -->
-    <div id="slideshow-container">
-        <!-- Each image in the slideshow -->
-        <img class="slides" src="static/meditationbg.jpeg" style="width:100%">
-        <img class="slides" src="static/pexels-lumn-167699.jpg" style="width:100%">
-        <img class="slides" src="static/pexels-michael-swigunski-7079774.jpg" style="width:100%">
-        <img class="slides" src="static/pexels-sam-kolder-2387873.jpg" style="width:100%">
-        <img class="slides" src="static/pexels-spencer-selover-775417.jpg" style="width:100%">
-        <!-- Add more images as needed -->
-    </div>
-  
-    <div class="container">
-        <h1 class="text-center mb-3">Namaskaram! Modern Saint Meditation Welcomes you!</h1>
-        <h2 class="text-center mb-4">"It's ok not to be okay, but it's not okay to stay that way"</h2>
-        <div class="row" style="margin:auto">
-            <div class="col-md-6">
-                <h2 class="text-center mt-4 mb-5">Why Mental Health is Important?</h2>
-              <p class="text-justify mt-2 mb-4 lead" style="color: black; text-align: justify;">
-                Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning. Prioritizing mental health is essential to foster resilience, cope with challenges, and experience life's joys. Just as physical health demands attention, nurturing mental health through self-care, support, and awareness is crucial for a balanced and fulfilling existence.</p>
+    <!-- Header with navigation menu -->
+    <header>
+        <nav>
+            <div class="container">
+                <!-- Logo and menu items -->
+                <a href="#" class="logo">Modern Saint Meditation</a>
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-            </div>
-            <div class=" d-none d-md-block col-md-6">
-                <img src="static/bg for msm.jpg" style="height:320px;border-radius:4px; margin-top:16px;">
-            </div>
-            <h2 class="text-center mt-2 mb-4">Open Programs</h2>
-            <div>
-                {% for Programs in Programs %}
-                    {% include 'Programs.html' %}
-                {% endfor %}
-            </div>
-            {% include 'Blogs.html' %}
-            <h2 class="text-center mt-2 mb-4">Book an Appointment</h2>
-            <div class="text-center"> Just as physical health demands attention, nurturing mental health through self-care,
-                support, and awareness is crucial for a balanced and fulfilling existence. </div>
-            <div class="text-center mt-2 mb-4">
-                <a class="btn btn-primary btn-lg"
-                    href="mailto: modernsaintmeditation1221@gmail.com ?subject=Question's%20about%20Programs&body=My%20Name%20%3A%20%3CYour%20name%20here%3E%0D%0A%0D%0AMy%20Contact%20Number%20%3A%20%3CYour%20contact%20number%20here%20%3A%20Optional%3E%0D%0A%0D%0AMy%20Question%20%3A%20%3CWrite%20your%20Questions%20here%3E%0D%0A%0D%0A%3CNote%20%3A%20%22Please%20don't%20hesitate%20to%20ask%20any%20questions.%20Your%20comfort%20is%20important%2C%20and%20we're%20here%20to%20help.%22%3E%0D%0A%0D%0A%0D%0A">Ask US</a>
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Modern Saint Meditation</h1>
+            <p>"It's ok not to be okay, but it's not okay to stay that way"</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Why Mental Health is Important</h2>
+            <p>Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning.</p>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs">
+        <div class="container">
+            <h2>Our Programs</h2>
+            <div class="program-list">
+                <div class="program">
+                    <h3>Personal Meditation Classes</h3>
+                    <p>Location: Online</p>
+                    <p>Fees: Rs. 2999/-</p>
+                    <a href="https://docs.google.com" class="btn">Apply</a>
+                </div>
+                <div class="program">
+                    <h3>Group Meditation Classes</h3>
+                    <p>Location: Online</p>
+                    <p>Fees: Rs. 999/-</p>
+                    <a href="https://docs.google.com" class="btn">Apply</a>
+                </div>
             </div>
         </div>
-        {% include 'footer.html' %}
-    </div>
+    </section>
 
-    <!-- Bootstrap JS and your existing scripts should be included at the end of the body tag -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-eXVeRfbFszky6qBuSgjfsuzyJxQw6FOhV5Yq0H1z8Q5eWqouM1MMSZz/5F93Yha1"
-        crossorigin="anonymous"></script>
-    <!-- Add any additional scripts here -->
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Latest Blogs</h2>
+            <div class="blog-list">
+                <article class="blog-post">
+                    <img src="path_to_blog_image_1.jpg" alt="Blog 1">
+                    <h3>The Art of Meditation</h3>
+                    <p>Meditation is a powerful practice that has been used for centuries to calm the mind, reduce stress, and enhance overall well-being...</p>
+                    <a href="#" class="btn">Read more</a>
+                </article>
+                <article class="blog-post">
+                    <img src="path_to_blog_image_2.jpg" alt="Blog 2">
+                    <h3>Yoga: A Journey to Physical and Mental Well-being</h3>
+                    <p>Yoga is an ancient practice that combines physical postures, breath control, and mindfulness to promote holistic health and well-being...</p>
+                    <a href="#" class="btn">Read more</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2022 Modern Saint Meditation</p>
+            <div class="social-links">
+                <a href="https://instagram.com">Instagram</a>
+                <a href="https://facebook.com">Facebook</a>
+                <a href="https://youtube.com">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
     <script>
-        let slideIndex = 0;
-        showSlides();
-
-        function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
-        }
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>

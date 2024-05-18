@@ -1,31 +1,154 @@
-/* Updated styles for social icons */
-.social-icons, footer .nav {
-    list-style: none;
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background: #4CAF50;
+    padding: 1rem 0;
+}
+
+header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+header .menu {
+    list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+header .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero section with background image */
+.hero {
+    background: url('static/meditationbg.jpeg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    height: 50vh; /* Adjusted height to 50% of the viewport height */
+    display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
-.social-icons li, footer .nav li {
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.about,
+.programs,
+.blog {
+    padding: 2rem 0;
+    background: #fff;
+}
+
+.about .container,
+.programs .container,
+.blog .container {
+    padding: 2rem 0;
+}
+
+.program-list,
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.program,
+.blog-post {
+    flex: 1 1 calc(50% - 2rem);
+    background: #f9f9f9;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.program img,
+.blog-post img {
+    width: 100%; /* Default size for images */
+    height: auto;
+    max-width: 100%; /* Ensures images don't exceed their container */
+    max-height: 100%; /* Ensures images don't exceed their container */
+    margin-bottom: 1rem;
+}
+
+.btn {
     display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.social-icons a, footer .nav a {
+.btn:hover {
+    background-color: #388E3C;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
     text-decoration: none;
 }
 
-/* Adjust the size of the icons */
-.social-icons img, footer .nav svg {
-    width: 24px;
-    height: 24px;
-}
+/* Responsive design */
+@media (max-width: 768px) {
+    header .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Adjust styles for smaller screens */
-@media only screen and (max-width: 768px) {
-    .social-icons img, footer .nav svg {
-        width: 20px;
-        height: 20px;
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .program,
+    .blog-post {
+        flex: 1 1 100%;
     }
 }
