@@ -1,154 +1,107 @@
-/* Base styles */
-html {
-    scroll-behavior: smooth;
+.menu li a:hover {
+    color: #ff8c00;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f0f0f0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-header {
-    background: #4CAF50;
-    padding: 1rem 0;
-}
-
-header .logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-header .menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-}
-
-header .menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Hero section with background image */
+/* Hero Section Styles */
 .hero {
-    background: url('static/meditationbg.jpeg') no-repeat center center;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
     color: #fff;
-    height: 50vh; /* Adjusted height to 50% of the viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
 .hero-content {
-    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
+/* Other Section Styles (about, programs, blog) */
 .about,
 .programs,
 .blog {
-    padding: 2rem 0;
-    background: #fff;
+    padding: 50px 20px;
 }
 
-.about .container,
-.programs .container,
-.blog .container {
-    padding: 2rem 0;
+.about h2,
+.programs h2,
+.blog h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
 }
 
 .program-list,
 .blog-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: space-between;
 }
 
 .program,
 .blog-post {
-    flex: 1 1 calc(50% - 2rem);
-    background: #f9f9f9;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 45%;
+    margin-bottom: 40px;
 }
 
-.program img,
-.blog-post img {
-    width: 100%; /* Default size for images */
-    height: auto;
-    max-width: 100%; /* Ensures images don't exceed their container */
-    max-height: 100%; /* Ensures images don't exceed their container */
-    margin-bottom: 1rem;
+.program h3,
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.program p,
+.blog-post p {
+    color: #666;
+    margin-bottom: 15px;
 }
 
 .btn {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
+    background-color: #ff8c00;
     color: #fff;
-    background-color: #4CAF50;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #388E3C;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-footer .social-links a {
-    color: #fff;
-    margin: 0 0.5rem;
-    text-decoration: none;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    header .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .program,
-    .blog-post {
-        flex: 1 1 100%;
-    }
+    background-color: #e67300;
 }
