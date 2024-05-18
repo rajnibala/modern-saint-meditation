@@ -1,107 +1,162 @@
+/* Header Styles */
+header {
+    background-color: #333; /* Background color for the header */
+    padding: 20px; /* Padding around the header content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.menu {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0; /* Remove default margin */
+}
+
+.menu li {
+    display: inline-block; /* Display menu items horizontally */
+    margin-right: 20px; /* Add spacing between menu items */
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Remove margin from the last menu item */
+}
+
+.menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Text color for menu items */
+    font-weight: bold; /* Bold font weight for menu items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
 .menu li a:hover {
-    color: #ff8c00;
+    color: #ff8c00; /* Change text color on hover */
+}
+
+/* Slideshow Section */
+.slideshow {
+    margin-top: 20px; /* Add space above the slideshow */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.slideshow-container {
+    display: flex; /* Use flexbox for slideshow */
+}
+
+.mySlides {
+    flex: 0 0 auto; /* Prevent slides from shrinking */
+    display: none; /* Hide slides by default */
+}
+
+.mySlides img {
+    width: 100%; /* Make slideshow images responsive */
+}
+
+/* Fade Animation */
+.fade {
+    animation-name: fade; /* Define fade animation */
+    animation-duration: 1.5s; /* Set animation duration */
+}
+
+@keyframes fade {
+    from {opacity: .4} /* Start opacity */
+    to {opacity: 1} /* End opacity */
 }
 
 /* Hero Section Styles */
 .hero {
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-}
-
-.mySlides {
-    display: none;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+    position: relative; /* Set position relative for absolute positioning */
+    overflow: hidden; /* Hide overflowing content */
+    color: #fff; /* Text color for hero section */
+    text-align: center; /* Center-align text */
+    margin-top: -20px; /* Adjust margin to align with header */
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    position: absolute; /* Position hero content absolutely */
+    top: 50%; /* Align content vertically */
+    left: 50%; /* Align content horizontally */
+    transform: translate(-50%, -50%); /* Center content */
+    z-index: 1; /* Ensure content appears above slideshow */
 }
 
 .hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3em; /* Set font size for hero heading */
+    margin-bottom: 20px; /* Add space below heading */
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Set font size for hero paragraph */
 }
 
 /* Other Section Styles (about, programs, blog) */
 .about,
 .programs,
 .blog {
-    padding: 50px 20px;
+    padding: 50px 20px; /* Add padding to section content */
 }
 
 .about h2,
 .programs h2,
 .blog h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
-    color: #333;
+    margin-bottom: 20px; /* Add space below section headings */
+    font-size: 2em; /* Set font size for section headings */
+    color: #333; /* Text color for section headings */
 }
 
 .program-list,
 .blog-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; /* Use flexbox for program and blog lists */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between; /* Distribute items evenly */
 }
 
 .program,
 .blog-post {
-    flex: 1 1 45%;
-    margin-bottom: 40px;
+    flex: 1 1 45%; /* Set flex properties for program and blog posts */
+    margin-bottom: 40px; /* Add space below program and blog posts */
 }
 
 .program h3,
 .blog-post h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1.5em; /* Set font size for program and blog headings */
+    margin-bottom: 10px; /* Add space below headings */
+    color: #333; /* Text color for headings */
 }
 
 .program p,
 .blog-post p {
-    color: #666;
-    margin-bottom: 15px;
+    color: #666; /* Text color for program and blog content */
+    margin-bottom: 15px; /* Add space below content */
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff8c00;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Display buttons as inline blocks */
+    padding: 10px 20px; /* Add padding to buttons */
+    background-color: #ff8c00; /* Button background color */
+    color: #fff; /* Text color for buttons */
+    text-decoration: none; /* Remove underline from buttons */
+    border-radius: 5px; /* Add rounded corners to buttons */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
 .btn:hover {
-    background-color: #e67300;
+    background-color: #e67300; /* Change background color on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px; /* Padding around footer content */
+    text-align: center; /* Center-align footer content */
+}
+
+.social-links a {
+    color: #fff; /* Text color for social links */
+    text-decoration: none; /* Remove underline from social links */
+    margin: 0 10px; /* Add space between social links */
+}
+
+.social-links a:hover {
+    color: #ff8c00; /* Change text color on hover */
 }

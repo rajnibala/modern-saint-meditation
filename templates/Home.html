@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title of the webpage -->
     <title>Modern Saint Meditation</title>
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Meta description for SEO -->
     <meta name="description" content="Modern Saint Meditation offers personalized meditation programs to enhance your mental health and well-being. Join our sessions to combat anxiety, depression, and more.">
-    <!-- Meta keywords for SEO -->
     <meta name="keywords" content="meditation, mental health, anxiety, depression, mindfulness, wellness, meditation programs">
+    <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
+    </style>
 </head>
 <body>
-    <!-- Header with navigation menu -->
     <header>
         <div class="container">
-            <!-- Logo and menu items -->
             <a href="#home" class="logo" title="Modern Saint Meditation Home">
-                <!-- Logo Image -->
                 <img src="static/hd logo MSM (6).jpg" alt="Modern Saint Meditation Logo">
             </a>
             <nav>
-                <ul class="menu">
-                    <li><a href="#home" title="Home">Home</a></li>
-                    <li><a href="#about" title="About">About</a></li>
-                    <li><a href="#programs" title="Programs">Programs</a></li>
-                    <li><a href="#blog" title="Blog">Blog</a></li>
-                    <li><a href="#contact" title="Contact">Contact</a></li>
-                </ul>
+                <a href="#home" title="Home">Home</a>
+                <a href="#about" title="About">About</a>
+                <a href="#programs" title="Programs">Programs</a>
+                <a href="#blog" title="Blog">Blog</a>
+                <a href="#contact" title="Contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Main content starts here -->
-    <main>
-        <!-- Hero Section with Background Image -->
-        <section id="home" class="hero">
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="static/c6fe5f5f-c370-46ac-a42c-4fafcd7b22dc.JPG" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="static/2024-04-29.png" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="static/pexels-shu-lei-13849089.jpg" style="width:100%">
-                </div>
+    <section class="slideshow">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="static/c6fe5f5f-c370-46ac-a42c-4fafcd7b22dc.JPG" style="width:100%">
             </div>
+            <div class="mySlides fade">
+                <img src="static/2024-04-29.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="static/pexels-shu-lei-13849089.jpg" style="width:100%">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Welcome to Modern Saint Meditation</h1>
                 <p>"It's ok not to be okay, but it's not okay to stay that way"</p>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
                 <h2>Why Mental Health is Important</h2>
@@ -63,19 +64,16 @@
             </div>
         </section>
 
-        <!-- Programs Section -->
         <section id="programs" class="programs">
             <div class="container">
                 <h2>Our Programs</h2>
                 <div class="program-list">
-                    <!-- Program 1 -->
                     <div class="program">
                         <h3>Personal Meditation Classes</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 2999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Personal Meditation Classes">Apply</a>
                     </div>
-                    <!-- Program 2 -->
                     <div class="program">
                         <h3>Group Meditation Classes</h3>
                         <p>Location: Online</p>
@@ -86,19 +84,16 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
         <section id="blog" class="blog">
             <div class="container">
                 <h2>Latest Blogs</h2>
                 <div class="blog-list">
-                    <!-- Blog Post 1 -->
                     <article class="blog-post">
                         <img src="path_to_blog_image_1.jpg" alt="Blog 1">
                         <h3>The Art of Meditation</h3>
                         <p>Meditation is a powerful practice that has been used for centuries to calm the mind, reduce stress, and enhance overall well-being...</p>
                         <a href="#" class="btn" title="Read more about The Art of Meditation">Read more</a>
                     </article>
-                    <!-- Blog Post 2 -->
                     <article class="blog-post">
                         <img src="path_to_blog_image_2.jpg" alt="Blog 2">
                         <h3>Yoga: A Journey to Physical and Mental Well-being</h3>
@@ -110,7 +105,6 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer id="contact">
         <div class="container">
             <p>&copy; 2022 Modern Saint Meditation</p>
@@ -122,9 +116,7 @@
         </div>
     </footer>
 
-    <!-- Smooth Scroll Script -->
     <script>
-        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -136,4 +128,3 @@
     </script>
 </body>
 </html>
-
