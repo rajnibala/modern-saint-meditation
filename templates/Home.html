@@ -1,42 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Saint Meditation</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Meta tags for SEO -->
     <meta name="description" content="Modern Saint Meditation offers personalized meditation programs to enhance your mental health and well-being. Join our sessions to combat anxiety, depression, and more.">
     <meta name="keywords" content="meditation, mental health, anxiety, depression, mindfulness, wellness, meditation programs">
+    <!-- Internal CSS styling -->
     <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      display: inline;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 0;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .logo img {
+            height: 50px;
+        }
+        nav {
+            float: right;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: inline;
+            margin-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .hero {
+            background: #e0e0e0;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero-content h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+            color: #555;
+        }
+        .about, .programs, .blog {
+            padding: 40px 20px;
+        }
+        .program-list, .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .program, .blog-post {
+            flex: 1 1 calc(50% - 40px);
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .program h3, .blog-post h3 {
+            margin-top: 0;
+        }
+        .blog-post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background: #007BFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            nav {
+                float: none;
+                text-align: center;
+            }
+            li {
+                display: block;
+                margin: 10px 0;
+            }
+            .program, .blog-post {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <div class="container">
+            <!-- Company logo with link to home -->
             <a href="#home" class="logo" title="Modern Saint Meditation Home">
                 <img src="static/hd logo MSM (6).jpg" alt="Modern Saint Meditation Logo">
             </a>
+            <!-- Navigation menu -->
             <nav>
-                <a href="#home" title="Home">Home</a>
-                <a href="#about" title="About">About</a>
-                <a href="#programs" title="Programs">Programs</a>
-                <a href="#blog" title="Blog">Blog</a>
-                <a href="#contact" title="Contact">Contact</a>
+                <ul class="menu">
+                    <!-- Menu items -->
+                    <li><a href="#home" title="Home">Home</a></li>
+                    <li><a href="#about" title="About">About</a></li>
+                    <!-- Dropdown menu for programs -->
+                    <li class="dropdown">
+                        <a href="#programs" class="dropbtn" title="Programs">Programs</a>
+                        <div class="dropdown-content">
+                            <a href="#personal" title="Personal Meditation Classes">Personal Meditation Classes</a>
+                            <a href="#group" title="Group Meditation Classes">Group Meditation Classes</a>
+                        </div>
+                    </li>
+                    <li><a href="#blog" title="Blog">Blog</a></li>
+                    <li><a href="#contact" title="Contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Automatic slideshow -->
     <section class="slideshow">
         <div class="slideshow-container">
+            <!-- Slides -->
             <div class="mySlides fade">
                 <img src="static/c6fe5f5f-c370-46ac-a42c-4fafcd7b22dc.JPG" style="width:100%">
             </div>
@@ -49,25 +200,33 @@
         </div>
     </section>
 
+    <!-- Main content -->
     <main>
+        <!-- Hero section -->
         <section id="home" class="hero">
             <div class="hero-content">
+                <!-- Heading and tagline -->
                 <h1>Welcome to Modern Saint Meditation</h1>
                 <p>"It's ok not to be okay, but it's not okay to stay that way"</p>
             </div>
         </section>
 
+        <!-- About section -->
         <section id="about" class="about">
             <div class="container">
+                <!-- About section content -->
                 <h2>Why Mental Health is Important</h2>
                 <p>Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning.</p>
             </div>
         </section>
 
+        <!-- Programs section -->
         <section id="programs" class="programs">
             <div class="container">
+                <!-- Programs section content -->
                 <h2>Our Programs</h2>
                 <div class="program-list">
+                    <!-- Individual program details -->
                     <div class="program">
                         <h3>Personal Meditation Classes</h3>
                         <p>Location: Online</p>
@@ -84,10 +243,13 @@
             </div>
         </section>
 
+        <!-- Blog section -->
         <section id="blog" class="blog">
             <div class="container">
+                <!-- Blog section content -->
                 <h2>Latest Blogs</h2>
                 <div class="blog-list">
+                    <!-- Individual blog posts -->
                     <article class="blog-post">
                         <img src="path_to_blog_image_1.jpg" alt="Blog 1">
                         <h3>The Art of Meditation</h3>
@@ -105,10 +267,13 @@
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer id="contact">
         <div class="container">
+            <!-- Footer content -->
             <p>&copy; 2022 Modern Saint Meditation</p>
             <div class="social-links">
+                <!-- Social media links -->
                 <a href="https://instagram.com">Instagram</a>
                 <a href="https://facebook.com">Facebook</a>
                 <a href="https://youtube.com">YouTube</a>
@@ -116,15 +281,22 @@
         </div>
     </footer>
 
+    <!-- JavaScript for automatic slideshow -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
     </script>
 </body>
 </html>
