@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags -->
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Saint Meditation</title>
@@ -23,31 +23,36 @@
             padding: 0 10px;
         }
         header {
-            background-color: #f8f8f8;
-            padding: none;
-            border-bottom: 0px solid #e7e7e7;
+            background-color: pastel blue;
+            padding: 10px 0;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
         }
         .logo img {
             height: 50px;
         }
         nav {
-            float: right;
+            margin-left: auto;
         }
         ul {
-            list-style-type: inline;
+            list-style: none;
             margin: 0;
             padding: 0;
+            display: flex;
         }
         li {
-            display: inline;
             margin-left: 20px;
         }
         a {
             text-decoration: none;
             color: #333;
+            font-weight: bold;
         }
         .slideshow-container {
-            position: center;
+            position: relative;
             max-width: 100%;
             margin: auto;
         }
@@ -86,7 +91,7 @@
         .program, .blog-post {
             flex: 1 1 calc(50% - 40px);
             background: #f4f4f4;
-            padding: 100px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 5px 8px rgba(0,0,0,0.1);
         }
@@ -94,12 +99,12 @@
             margin-top: 0;
         }
         .blog-post img {
-            max-width: 50%;
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
         .btn {
-            display: right;
+            display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;
             background: #007BFF;
@@ -123,11 +128,14 @@
         }
         @media (max-width: 768px) {
             nav {
-                float: none;
+                margin: 0 auto;
                 text-align: center;
             }
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
             li {
-                display: block;
                 margin: 10px 0;
             }
             .program, .blog-post {
@@ -139,7 +147,6 @@
 <body>
     <!-- Header section -->
     <header>
-        
         <div class="container">
             <!-- Company logo with link to home -->
             <a href="#home" class="logo" title="Modern Saint Meditation Home">
@@ -152,7 +159,7 @@
                     <!-- Menu items -->
                     <li><a href="#home" title="Home">Home</a></li>
                     <li><a href="#about" title="About">About</a></li>
-                    <li><a href="#about" title="About">Programs</a></li>
+                    <li><a href="#programs" title="Programs">Programs</a></li>
                     <li><a href="#blog" title="Blog">Blog</a></li>
                     <li><a href="#contact" title="Contact">Contact</a></li>
                 </ul>
@@ -178,7 +185,7 @@
 
     <!-- Main content -->
     <main>
-        <!-- Hero section blow image where wriiten welcome to msm-->
+        <!-- Hero section -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <!-- Heading and tagline -->
@@ -192,7 +199,14 @@
             <div class="container">
                 <!-- About section content -->
                 <h2>Why Mental Health is Important</h2>
-                <p>Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning.</p>
+                <div class="about-content">
+                    <div class="text">
+                        <p>Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning.</p>
+                    </div>
+                    <div class="image">
+                        <img src="static/pexels-rdne-stock-project-8710857.jpg" alt="Mental Health Image" width="400" height="300">
+                    </div>               
+                </div>
             </div>
         </section>
 
@@ -261,8 +275,7 @@
                     <article class="blog-post">
                         <img src="static/2024-04-29.png" alt="Blog 2">
                         <h3>Yoga: A Journey to Physical and Mental Well-being</h3>
-                        <p>Yoga, an age-old tradition, harmonizes the body, mind, and spirit, offering a holistic approach to health and well-being. By intertwining physical postures, controlled breathing, and mindful awareness, yoga nurtures a profound sense of balance and vitality.                        Through regular practice, individuals experience a myriad of benefits, ranging from increased flexibility and strength to reduced stress and anxiety. Beyond the physical realm, yoga serves as a transformative tool for self-exploration and inner peace.
-
+                        <p>Yoga, an age-old tradition, harmonizes the body, mind, and spirit, offering a holistic approach to health and well-being. By intertwining physical postures, controlled breathing, and mindful awareness, yoga nurtures a profound sense of balance and vitality. Through regular practice, individuals experience a myriad of benefits, ranging from increased flexibility and strength to reduced stress and anxiety. Beyond the physical realm, yoga serves as a transformative tool for self-exploration and inner peace.
                         With each breath and movement, practitioners embark on a journey of self-discovery, unlocking the potential for profound healing and personal growth. Embracing yoga, we embrace the opportunity to reconnect with our true essence and cultivate a life of harmony and wholeness.</p>
                         <a href="#" class="btn" title="Read more about Yoga">Read more</a>
                     </article>
@@ -270,10 +283,8 @@
                         <img src="static/2024-04-29.png" alt="Blog 3">
                         <h3>Fear of Irritation and Endangerment</h3>
                         <p>Fear, an intrinsic aspect of the human experience, often manifests as a sense of irritation and impending danger, disrupting our peace of mind and well-being. Whether rooted in past trauma or future uncertainties, fear can overshadow our daily lives, hindering personal growth and fulfillment.
-
                         Recognizing and understanding the sources of our fear is the first step towards liberation. Through introspection and self-awareness, we unravel the tangled web of irrational anxieties and limiting beliefs, paving the way for profound healing and transformation.
                         By cultivating mindfulness and resilience, we learn to navigate fear with grace and courage, embracing each challenge as an opportunity for growth and empowerment. Through therapeutic practices such as meditation and cognitive-behavioral techniques, we reframe our perceptions, reclaiming our inner peace and sovereignty.
-
                         With patience and perseverance, we transcend the grip of fear, stepping into the light of authenticity and empowerment. Empowered by our newfound resilience, we navigate life's uncertainties with confidence and clarity, embracing each moment with open arms and a courageous heart.</p>
                         <a href="#" class="btn" title="Read more about Fear of Irritation and Endangerment">Read more</a>
                     </article>
@@ -281,11 +292,8 @@
                         <img src="static/2024-04-29.png" alt="Blog 4">
                         <h3>Low Tolerance Power</h3>
                         <p>Low tolerance power, often stemming from anxiety and stress, can leave us feeling overwhelmed by life's challenges. It diminishes our ability to handle stressors, creating a cycle of distress. To overcome it, we must cultivate resilience.
-
                         Through mindfulness practices like meditation and controlled breathing, we anchor ourselves in the present, fostering calm amidst chaos. Building a support network of loved ones and professionals provides invaluable guidance and encouragement.
-
                         By embracing vulnerability and seeking help when needed, we recognize our strength lies in our ability to overcome adversity. With each setback, we grow more resilient, transforming challenges into opportunities for growth.
-
                         Conquering low tolerance power isn't just about bouncing back; it's about emerging stronger and more empowered than before. It's reclaiming our agency and embracing life's challenges as catalysts for personal transformation.</p>
                         <a href="#" class="btn" title="Read more about Low Tolerance Power">Read more</a>
                     </article>

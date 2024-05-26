@@ -9,4 +9,13 @@
     --back-woods: #52796F;
 }
 
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+}
+
+.text {
+    flex: 1;
+}
 
