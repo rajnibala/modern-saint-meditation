@@ -1,5 +1,6 @@
 /* Color scheme variables */
 :root {
+    /* Define color variables for reuse throughout the stylesheet */
     --whitest-white: #F9F5EB;
     --jalapeno-poppers: #D4A373;
     --stiletto: #6D597A;
@@ -9,13 +10,5 @@
     --back-woods: #52796F;
 }
 
-.about-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-}
 
-.text {
-    flex: 1;
-}
 

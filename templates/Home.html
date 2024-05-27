@@ -4,6 +4,7 @@
     <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Modern Saint Meditation</title>
     <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
@@ -12,82 +13,169 @@
     <meta name="keywords" content="meditation, mental health, anxiety, depression, mindfulness, wellness, meditation programs">
     <!-- Internal CSS styling -->
     <style>
+        /* Base styling for body */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+        /* Container class to set max width and center content */
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 10px;
         }
+        /* Header section styling */
         header {
-            background-color: pastel blue;
+            background-color: #1a371e;
             padding: 10px 0;
-            border-bottom: 1px solid #e7e7e7;
+            border-bottom: none;/* This line sets the white border but added none so it will not show border line */
         }
+        /* Navigation bar styling */
+        .nav-bar {
+            /* Existing properties */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 50px; /* Capsule shape */
+            background-color: #fff;
+            /* Add these properties */
+            box-shadow: none; /* Remove the shadow */
+            border-bottom: none; /* Hide the bottom border */
+        }
+
+
+        /* Logo section styling */
         .logo {
             display: flex;
             align-items: center;
         }
+        /* Logo image styling */
         .logo img {
-            height: 50px;
+            height: 70px;
+            margin-right: 20px;
         }
+        /* Logo text styling */
+        .logo h1 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #333;
+        }
+        /* Navigation menu styling */
         nav {
-            margin-left: auto;
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-end;
         }
+        /* Fixed navbar styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 10px 0;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+
+        .navbar.hidden {
+            top: -100px; /* Move navbar out of view */
+        }
+
+        /* Unordered list for menu */
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
         }
+        /* List item for menu */
         li {
             margin-left: 20px;
         }
+        /* Menu links styling */
         a {
             text-decoration: none;
-            color: #333;
+            color: #1A371E;
             font-weight: bold;
         }
+        /* Slideshow container styling */
         .slideshow-container {
             position: relative;
-            max-width: 100%;
+            max-width: 85%;
             margin: auto;
         }
+        /* Individual slide styling */
         .mySlides {
             display: none;
         }
+        /* Clearfix for slideshow container */
+        .slideshow-container::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* Animation for slide fade effect */
         .fade {
             animation-name: fade;
             animation-duration: 1.5s;
         }
+        /* Keyframes for fade animation */
         @keyframes fade {
             from {opacity: .4} 
             to {opacity: 1}
         }
+        /* Hero section styling */
         .hero {
-            background: #e0e0e0;
+            background: #1A371E;
             text-align: center;
-            padding: 30px 20px;
+            color: white;
+            padding: 20px 10px;
+            position: relative; /* Ensure relative positioning for absolutely positioned content */
         }
-        .hero-content h1 {
-            margin: 0;
-            font-size: 2.5em;
+
+        /* Hero image styling */
+        .hero img {
+            width: 50%; /* Adjust the percentage value as needed */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensure the image does not exceed its container */
+            display: block; /* Prevent any spacing issues */
+            margin: 0 auto; /* Center the image horizontally */
+            position: absolute; /* Position the image relative to its container */
+            top: 50%; /* Position the image at the vertical center */
+            left: 50%; /* Position the image at the horizontal center */
+            transform: translate(-50%, -50%); /* Adjust the position to center */
         }
-        .hero-content p {
-            font-size: 1.2em;
-            color: #555;
+       
+        .images {
+            /* Use Flexbox to arrange images horizontally */
+            display: flex;
+            /* Distribute space between images */
+            justify-content: space-between;
+            /* Margin to provide spacing between images and paragraph */
+            margin-top: 10px; /* Adjust margin as needed */
         }
+
+        .images img {
+            /* Set the width of each image to one-third of the container width */
+            width: calc(33.33% - 10px); /* Adjust width and margin as needed */
+            /* Margin to provide spacing between images */
+            margin-right: 10px;
+        }
+
+        /* Section padding */
         .about, .programs, .blog {
-            padding: 100px 20px;
+            padding: 10px 20px;
         }
+        /* Flexbox for program and blog list */
         .program-list, .blog-list {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
+        /* Program and blog post card styling */
         .program, .blog-post {
             flex: 1 1 calc(50% - 40px);
             background: #f4f4f4;
@@ -95,84 +183,138 @@
             border-radius: 8px;
             box-shadow: 0 5px 8px rgba(0,0,0,0.1);
         }
+        /* Program and blog post heading styling */
         .program h3, .blog-post h3 {
             margin-top: 0;
         }
+        /* Blog post image styling */
         .blog-post img {
             max-width: 100%;
-            height: auto;
+            height: 100px;
             border-radius: 8px;
         }
+        /* Button styling */
         .btn {
             display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;
-            background: #007BFF;
+            background: #1A371E;
             color: white;
             border-radius: 5px;
             text-decoration: none;
         }
+        /* Button hover effect */
         .btn:hover {
-            background: #0056b3;
+            background: #1A371E;
         }
+        /* Footer styling */
         footer {
-            background: #333;
+            background: #1A371E;
             color: white;
             padding: 10px 0;
-            text-align: center;
-        }
+            text-align-last: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items to the top */
+            }
+
+            .contact-info {
+                text-align: left;
+            }
+
+            .footer-content {
+                text-align-last: right;
+            }
+
+            .social-links {
+                margin-top: 20px; /* Adjust as needed */
+            }
+
+            .social-links a {
+                margin-right: 10px; /* Adjust as needed */
+            }
+
+        /* Social links styling */
         .social-links a {
             color: white;
             margin: 0 10px;
             text-decoration: none;
         }
-        @media (max-width: 768px) {
+        /* Responsive styling for screens smaller than 800px */
+        @media (max-width: 800px) {
+            /* Center navigation for smaller screens */
             nav {
                 margin: 0 auto;
-                text-align: center;
+                display: flex;
+                justify-content: center;
             }
+            /* Adjust unordered list styling */
             ul {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
             }
+            /* Adjust list item margin */
             li {
-                margin: 10px 0;
+                margin: 0 10px;
             }
+            /* Program and blog post flex size */
             .program, .blog-post {
                 flex: 1 1 100%;
             }
+        }
+        /* Full blog post content hidden initially */
+        .full-post {
+            display: none;
+            padding: 20px;
+            background: #f9f9f9;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        /* Full blog post heading styling */
+        .full-post h2 {
+            margin-top: 0;
+        }
+        /* Full blog post paragraph styling */
+        .full-post p {
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <!-- Header section -->
-    <header>
+    <header id="navbar" class="navbar">
         <div class="container">
-            <!-- Company logo with link to home -->
-            <a href="#home" class="logo" title="Modern Saint Meditation Home">
-                <img src="static/hd logo MSM (6).jpg" alt="Modern Saint Meditation Logo">
-                <h1>Modern Saint Meditation</h1>
-            </a>
-            <!-- Navigation menu -->
-            <nav>
-                <ul class="menu">
-                    <!-- Menu items -->
-                    <li><a href="#home" title="Home">Home</a></li>
-                    <li><a href="#about" title="About">About</a></li>
-                    <li><a href="#programs" title="Programs">Programs</a></li>
-                    <li><a href="#blog" title="Blog">Blog</a></li>
-                    <li><a href="#contact" title="Contact">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="nav-bar">
+                <!-- Company logo with link to home -->
+                <a href="#home" class="logo" title="Modern Saint Meditation Home">
+                    <img src="static/hd logo MSM (6).jpg" alt="Modern Saint Meditation Logo">
+                    <h1>Modern Saint Meditation</h1>
+                </a>
+                <!-- Navigation menu -->
+                <nav>
+                    <ul class="menu">
+                        <!-- Menu items -->
+                        <li><a href="#home" title="Home">Home</a></li>
+                        <li><a href="#programs" title="Programs">Programs</a></li>
+                        <li><a href="#blog" title="Blog">Blogs</a></li>
+                        <li><a href="#contact" title="Contact Us">Contact Us</a></li>
+                        <li><a href="#about" title="About Us">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
-
+  
     <!-- Automatic slideshow -->
     <section class="slideshow">
         <div class="slideshow-container">
             <!-- Slides -->
             <div class="mySlides fade">
                 <img src="static/c6fe5f5f-c370-46ac-a42c-4fafcd7b22dc.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="static/IMG_4068 (1).jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="static/2024-04-29.png" style="width:100%">
@@ -200,14 +342,24 @@
                 <!-- About section content -->
                 <h2>Why Mental Health is Important</h2>
                 <div class="about-content">
+                    <!-- Paragraph about mental health -->
                     <div class="text">
-                        <p>Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our relationships, work, and daily functioning.</p>
+                        <p>
+                            Mental health holds paramount significance as it profoundly influences our overall well-being and quality of life. It dictates how we think, feel, and behave, impacting our ability to handle stress, maintain relationships, and make informed decisions. A sound mental state fosters resilience, emotional stability, and productivity, empowering individuals to navigate life's challenges and pursue personal goals. Conversely, poor mental health can lead to a cascade of issues, from decreased physical health and impaired functioning to heightened risk of mental disorders. Recognizing and prioritizing mental health is crucial for fostering a balanced, fulfilling life and building a compassionate, supportive society where individuals can thrive emotionally and psychologically.
+                        </p>
                     </div>
-                    <div class="image">
-                        <img src="static/pexels-rdne-stock-project-8710857.jpg" alt="Mental Health Image" width="400" height="300">
-                    </div>               
+                    <!-- Images related to mental health -->
+                    <div class="images">
+                        <!-- Image 1 -->
+                        <img src="static/wp5540087.jpg" alt="Image 1">
+                        <!-- Image 2 -->
+                        <img src="static/—Pngtree—meditation_3375016.jpg" alt="Image 2">
+                        <!-- Image 3 -->
+                        <img src="static/desktop-wallpaper-cannabis-women-s-health-and-pelvic-conditions-weed-edits-women.jpg" alt="Image 3">
+                    </div>
                 </div>
             </div>
+
         </section>
 
         <!-- Programs section -->
@@ -303,35 +455,92 @@
     </main>
 
     <!-- Footer section -->
-    <footer id="contact">
+    <footer>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <!-- Contact section content -->
+                    <h2>Contact Us</h2>
+                    <p>Have any questions or need assistance? Feel free to reach out to us at:</p>
+                    <p>Email: modernsaintmeditation1221@gmail.com</p>
+                    <p>Phone: +91 8285904395</p>
+                    <p>Address: Najafgarh, Delhi, India</p>
+                </div>
+            </div>
+        </section>
         <div class="container">
-            <!-- Footer content -->
-            <p>&copy; 2022 Modern Saint Meditation</p>
-            <div class="social-links">
+            <div class="footer-content">
+                <!-- Footer content -->
+                <p>&copy; 2023 Modern Saint Meditation. All Rights Reserved.</p>
                 <!-- Social media links -->
-                <a href="https://www.instagram.com/modernsaintmeditation/">Instagram</a>
-                <a href="https://facebook.com">Facebook</a>
-                <a href="https://www.youtube.com/@ModernSaintMeditation1001">YouTube</a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/modernsaintmed/" title="Follow us on Facebook">Facebook</a>
+                    <a href="https://www.youtube.com/@ModernSaintMeditation1001" title="Follow us on Twitter">Youtube</a>
+                    <a href="https://www.instagram.com/modernsaintmeditation/" title="Follow us on Instagram">Instagram</a>
+                </div>
+                <!-- Image link -->
+                
+                <img src="static/HDlogo.jpg" style="width:10%">
             </div>
         </div>
     </footer>
+   
 
-    <!-- JavaScript for automatic slideshow -->
-    <script>
-        var slideIndex = 0;
-        showSlides();
+    </body>
+    </html>
 
-        function showSlides() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}
-            slides[slideIndex-1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
+
+<!-- JavaScript for automatic slideshow and hiding/showing navbar on scroll -->
+<script>
+    // Function to show the navbar
+    function showNavbar() {
+        document.getElementById("navbar").classList.remove("hidden");
+    }
+
+    // Function to hide the navbar
+    function hideNavbar() {
+        document.getElementById("navbar").classList.add("hidden");
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
-    </script>
-</body>
-</html>
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    let prevScrollpos = window.pageYOffset;
+    let isScrolling;
+
+    window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+
+        if (prevScrollpos > currentScrollPos) {
+            // Scrolling up, show navbar
+            showNavbar();
+        } else {
+            // Scrolling down, hide navbar
+            hideNavbar();
+        }
+
+        // Clear our timeout throughout the scroll
+        window.clearTimeout(isScrolling);
+
+        // Set a timeout to run after scrolling ends
+        isScrolling = setTimeout(function() {
+            // Run the callback
+            showNavbar();
+        }, 1000); // Adjust delay time as needed
+
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+
