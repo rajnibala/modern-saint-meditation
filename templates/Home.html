@@ -18,7 +18,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
+            }
         /* Container class to set max width and center content */
         .container {
             max-width: 1300px;
@@ -44,8 +44,6 @@
             box-shadow: none; /* Remove the shadow */
             border-bottom: none; /* Hide the bottom border */
         }
-
-
         /* Logo section styling */
         .logo {
             display: flex;
@@ -104,9 +102,18 @@
         /* Slideshow container styling */
         .slideshow-container {
             position: relative;
-            max-width: 85%;
+            max-width: 100%;
             margin: auto;
         }
+
+        /* Ensure all images in the slideshow have the same height */
+        .slideshow-container img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-height: 500px; /* Set a max height if needed */
+            object-fit: cover; /* Ensures the image covers the container without stretching */
+        }
+
         /* Individual slide styling */
         .mySlides {
             display: none;
@@ -134,7 +141,7 @@
             color: white;
             padding: 20px 10px;
             position: relative; /* Ensure relative positioning for absolutely positioned content */
-        }
+              }
 
         /* Hero image styling */
         .hero img {
@@ -277,9 +284,7 @@
         }
         /* Full blog post paragraph styling */
         .full-post p {
-            line-height: 1.6;
-        }
-    </style>
+            line-height: 1.6;</style>
 </head>
 <body>
     <!-- Header section -->
@@ -374,7 +379,7 @@
                         <p>Location: Online</p>
                         <p>Fees: Rs. 2999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Personal Meditation Classes">Apply</a>
-                       
+                
                     </div>
                     <div class="program">
                         <h3>Group Meditation Classes</h3>
