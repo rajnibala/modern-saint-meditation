@@ -15,6 +15,10 @@
     <style>
         /* Base styling for body */
         body {
+
+                background-image: url('static/pexels-trvlust-3369526.jpg');
+                background-size: cover; /* Cover the entire background */
+                background-repeat: no-repeat; /* Prevent the image from repeating */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -104,13 +108,15 @@
             position: relative;
             max-width: 100%;
             margin: auto;
+             margin-top: 100px; /* Adjust this value if needed to match the height of your navbar */
+    
         }
-
+        
         /* Ensure all images in the slideshow have the same height */
         .slideshow-container img {
             width: 100%;
             height: auto; /* Maintain aspect ratio */
-            max-height: 500px; /* Set a max height if needed */
+            max-height: 600px; /* Set a max height if needed */
             object-fit: cover; /* Ensures the image covers the container without stretching */
         }
 
