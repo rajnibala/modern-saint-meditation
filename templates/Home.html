@@ -16,7 +16,7 @@
         /* Base styling for body */
         body {
 
-                background-image: url('static/pexels-trvlust-3369526.jpg');
+                background-image: url('paste image to set bg here.jpg');
                 background-size: cover; /* Cover the entire background */
                 background-repeat: no-repeat; /* Prevent the image from repeating */
             font-family: Arial, sans-serif;
@@ -43,7 +43,7 @@
             align-items: center;
             padding: 10px 20px;
             border-radius: 50px; /* Capsule shape */
-            background-color: #fff;
+            background-color: #e8e8e8;
             /* Add these properties */
             box-shadow: none; /* Remove the shadow */
             border-bottom: none; /* Hide the bottom border */
@@ -55,21 +55,30 @@
         }
         /* Logo image styling */
         .logo img {
-            height: 70px;
-            margin-right: 20px;
+            height: 60px;
+            margin-right: 10px;
         }
         /* Logo text styling */
         .logo h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #333;
         }
         /* Navigation menu styling */
         nav {
             flex-grow: 1;
-            display: flex;
-            justify-content: flex-end;
+            display: none; /* Hide the navigation menu by default */
         }
+
+        /* Media query for small devices */
+        @media (min-width: 768px) {
+            /* Show the navigation menu on larger devices */
+            nav {
+                display: flex; /* Change display property to flex to show the menu */
+                justify-content: flex-end;
+            }
+        }
+
         /* Fixed navbar styles */
         .navbar {
             position: fixed;
@@ -91,7 +100,7 @@
             list-style: none;
             margin: 0;
             padding: 0;
-            display: flex;
+            display: flex; /* when i type none menu in is not visible */
         }
         /* List item for menu */
         li {
@@ -188,6 +197,51 @@
             flex-wrap: wrap;
             gap: 20px;
         }
+        /* Add or update the following CSS rules in your existing CSS code */
+
+        /* Program image wrapper */
+        .s_media_list_img_wrapper {
+            overflow: hidden;
+            border-radius: 8px 0 0 8px; /* Adjust border radius as needed */
+        }
+
+        /* Program image */
+        .s_media_list_img {
+            object-fit: cover;
+            height: 100%; /* Ensures the image covers the container */
+            width: 100%; /* Ensures the image covers the container */
+        }
+
+        /* Program details body */
+        .s_media_list_body {
+            padding: 15px; /* Adjust padding as needed */
+        }
+
+        /* Program name */
+        .s_media_list_body h3 {
+            margin-top: 0; /* Remove top margin */
+        }
+
+        /* Program description */
+        .s_media_list_body p {
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        /* Apply button */
+        .s_media_list_body .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
+            border-radius: 5px; /* Button border radius */
+            text-decoration: none;
+        }
+
+        /* Apply button hover effect */
+        .s_media_list_body .btn:hover {
+            background-color: #0056b3; /* Hover background color */
+        }
+
         /* Program and blog post card styling */
         .program, .blog-post {
             flex: 1 1 calc(50% - 40px);
@@ -253,12 +307,19 @@
             margin: 0 10px;
             text-decoration: none;
         }
+
+    
         /* Responsive styling for screens smaller than 800px */
         @media (max-width: 800px) {
+             /* Responsive styling for slideshow */
+            .slideshow-container img { 
+                max-height: 180px; /* Adjust max height for small screens */
+            }
+
             /* Center navigation for smaller screens */
             nav {
                 margin: 0 auto;
-                display: flex;
+                display: none;/*none =menu not show on smaller devices, flex = show */
                 justify-content: center;
             }
             /* Adjust unordered list styling */
@@ -299,7 +360,7 @@
             <div class="nav-bar">
                 <!-- Company logo with link to home -->
                 <a href="#home" class="logo" title="Modern Saint Meditation Home">
-                    <img src="static/hd logo MSM (6).jpg" alt="Modern Saint Meditation Logo">
+                    <img src="static/hd_logo_MSM__6_-removebg-preview.png" alt="Modern Saint Meditation Logo">
                     <h1>Modern Saint Meditation</h1>
                 </a>
                 <!-- Navigation menu -->
@@ -381,38 +442,50 @@
                 <div class="program-list">
                     <!-- Individual program details -->
                     <div class="program">
-                        <h3>Personal Meditation Classes</h3>
+                        <h3>Wellness sessions</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 2999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Personal Meditation Classes">Apply</a>
                 
                     </div>
-                    <div class="program">
-                        <h3>Group Meditation Classes</h3>
-                        <p>Location: Online</p>
-                        <p>Fees: Rs. 999/-</p>
-                        <a href="https://docs.google.com" class="btn" title="Apply for Group Meditation Classes">Apply</a>
-                    </div>
-                    <div class="program">
+                      <div class="program">
                         <h3>Personal counselling</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Personal counselling">Apply</a>
                     </div>
                     <div class="program">
-                        <h3>Relationship counselling</h3>
+                        <h3>Couple counselling</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Relationship counselling">Apply</a>
                     </div>
                     <div class="program">
-                        <h3>Family counselling</h3>
+                        <h3>Parental counselling</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for Family counselling">Apply</a>
                     </div>
                     <div class="program">
-                        <h3>Child counselling</h3>
+                        <h3>Student counselling</h3>
+                        <p>Location: Online</p>
+                        <p>Fees: Rs. 999/-</p>
+                        <a href="https://docs.google.com" class="btn" title="Apply for child counselling">Apply</a>
+                    </div>
+                    <div class="program">
+                        <h3>Teacher counselling</h3>
+                        <p>Location: Online</p>
+                        <p>Fees: Rs. 999/-</p>
+                        <a href="https://docs.google.com" class="btn" title="Apply for child counselling">Apply</a>
+                    </div>
+                    <div class="program">
+                        <h3>Meditation classes</h3>
+                        <p>Location: Online</p>
+                        <p>Fees: Rs. 999/-</p>
+                        <a href="https://docs.google.com" class="btn" title="Apply for child counselling">Apply</a>
+                    </div>
+                    <div class="program">
+                        <h3>Group meditation classes</h3>
                         <p>Location: Online</p>
                         <p>Fees: Rs. 999/-</p>
                         <a href="https://docs.google.com" class="btn" title="Apply for child counselling">Apply</a>
