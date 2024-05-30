@@ -274,6 +274,7 @@
         .btn:hover {
             background: #1A371E;
         }
+
         /* Footer styling */
         footer {
             background: #1A371E;
@@ -311,11 +312,15 @@
     
         /* Responsive styling for screens smaller than 800px */
         @media (max-width: 800px) {
+            /* Update existing media query for small devices */
+            /* Show side nav when button is clicked */
+                .side-nav {
+                    width: 0; /* Initially hide the side nav */
+                    /* Other styles remain the same */
+                }
              /* Responsive styling for slideshow */
             .slideshow-container img { 
-                max-height: 180px; /* Adjust max height for small screens */
-            }
-
+                max-height: 180px; /* Adjust max height for small screens */  }
             /* Center navigation for smaller screens */
             nav {
                 margin: 0 auto;
@@ -351,9 +356,43 @@
         }
         /* Full blog post paragraph styling */
         .full-post p {
-            line-height: 1.6;</style>
+            line-height: 1.6;
+        }
+        /* CSS for the side navigation menu */
+        .side-nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 101; /* Ensure the side nav appears above other content */
+            top: 0;
+            left: 0;
+            background-color: #111; /* Background color of the side nav */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            padding-top: 60px; /* Add padding to avoid content being hidden under the navbar */
+            transition: 0.5s; /* Smooth transition effect */
+        }
+
+        .side-nav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s; /* Smooth transition effect for hover */
+        }
+
+        .side-nav a:hover {
+            color: #f1f1f1; /* Change text color on hover */
+        }
+     
+        
+    </style>
+
 </head>
 <body>
+
+ 
+
     <!-- Header section -->
     <header id="navbar" class="navbar">
         <div class="container">
@@ -374,6 +413,19 @@
                         <li><a href="#about" title="About Us">About Us</a></li>
                     </ul>
                 </nav>
+                <!-- Add a button to open the side nav -->
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+                <!-- Add the side navigation menu -->
+                <div id="sideNav" class="side-nav">
+                    <!-- Close button for the side nav -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <!-- Side nav links -->
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
             </div>
         </div>
     </header>
@@ -627,6 +679,15 @@
         }, 1000); // Adjust delay time as needed
 
         prevScrollpos = currentScrollPos;
+    }
+
+    /* JavaScript for opening and closing the side navigation menu */
+    function openNav() {
+        document.getElementById("sideNav").style.width = "250px"; // Open the side nav by setting its width
+    }
+
+    function closeNav() {
+        document.getElementById("sideNav").style.width = "0"; // Close the side nav by setting its width to 0
     }
 </script>
 
