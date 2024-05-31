@@ -16,7 +16,7 @@
         /* Base styling for body */
         body {
 
-                background-image: url('paste image to set bg here.jpg');
+                background-image: url('paste image to set bg here.jpg');/* image Cover the entire background */
                 background-size: cover; /* Cover the entire background */
                 background-repeat: no-repeat; /* Prevent the image from repeating */
             font-family: Arial, sans-serif;
@@ -125,7 +125,7 @@
         .slideshow-container img {
             width: 100%;
             height: auto; /* Maintain aspect ratio */
-            max-height: 600px; /* Set a max height if needed */
+            max-height: 550px; /* Set a max height if needed */
             object-fit: cover; /* Ensures the image covers the container without stretching */
         }
 
@@ -151,12 +151,14 @@
         }
         /* Hero section styling */
         .hero {
-            background: #1A371E;
-            text-align: center;
-            color: white;
-            padding: 20px 10px;
-            position: relative; /* Ensure relative positioning for absolutely positioned content */
-              }
+            background: #1A371E; /* Set the background color of the hero section to a dark green shade */
+            text-align: center; /* Center-align the text within the hero section */
+            font-size: 1em; /* Set the font size of the text to 1em (relative to the parent element's font size) */
+            color: white; /* Set the text color to white */
+            padding: 20px 10px; /* Add 20 pixels of padding to the top and bottom, and 10 pixels to the left and right */
+            position: relative; /* Set the position to relative to allow for absolutely positioned child elements */
+        }
+
 
         /* Hero image styling */
         .hero img {
@@ -277,14 +279,14 @@
 
         /* Footer styling */
         footer {
-            background: #1A371E;
-            color: white;
-            padding: 10px 0;
-            text-align-last: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start; /* Align items to the top */
-            }
+            background: #1A371E;        /* Set the background color of the footer to a dark green shade */
+            color: white;               /* Set the text color in the footer to white for better contrast */
+            padding: 10px 0px;          /* Add padding: 0 pixels on top and bottom, 10 pixels on left and right */
+            text-align-last: left;      /* Align the last line of text to the left */
+            display: flex;              /* Use flexbox layout for the footer content */
+            justify-content: space-between; /* Distribute space between child elements, aligning them at both ends */
+            align-items: flex-start;    /* Align child elements to the top of the container */
+        }
 
             .contact-info {
                 text-align: left;
@@ -310,8 +312,8 @@
         }
 
     
-        /* Responsive styling for screens smaller than 800px */
-        @media (max-width: 800px) {
+        /* Responsive styling for screens smaller than 768px */
+        @media (max-width: 768px) {
             /* Update existing media query for small devices */
             /* Show side nav when button is clicked */
                 .side-nav {
@@ -320,7 +322,7 @@
                 }
              /* Responsive styling for slideshow */
             .slideshow-container img { 
-                max-height: 180px; /* Adjust max height for small screens */  }
+                max-height: 160px; /* Adjust max height for small screens */  }
             /* Center navigation for smaller screens */
             nav {
                 margin: 0 auto;
@@ -418,6 +420,7 @@
 
                 <!-- Add the side navigation menu -->
                 <div id="sideNav" class="side-nav">
+                   
                     <!-- Close button for the side nav -->
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <!-- Side nav links -->
@@ -438,7 +441,7 @@
                 <img src="static/c6fe5f5f-c370-46ac-a42c-4fafcd7b22dc.JPG" style="width:100%">
             </div>
             <div class="mySlides fade">
-                <img src="static/IMG_4068 (1).jpg" style="width:100%">
+                <img src="static/trip rishikesh.jpg" style="width:100%">
             </div>
             <div class="mySlides fade">
                 <img src="static/2024-04-29.png" style="width:100%">
@@ -464,6 +467,8 @@
         <section id="about" class="about">
             <div class="container">
                 <!-- About section content -->
+                
+
                 <h2>Why Mental Health is Important</h2>
                 <div class="about-content">
                     <!-- Paragraph about mental health -->
