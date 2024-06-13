@@ -186,7 +186,7 @@
             /* Set the width of each image to one-third of the container width */
             width: calc(33.33% - 10px); /* Adjust width and margin as needed */
             /* Margin to provide spacing between images */
-            margin-right: 10px;
+            margin-right: 0px;
         }
 
         /* Section padding */
@@ -277,38 +277,81 @@
             background: #1A371E;
         }
 
-        /* Footer styling */
         footer {
-            background: #1A371E;        /* Set the background color of the footer to a dark green shade */
-            color: white;               /* Set the text color in the footer to white for better contrast */
-            padding: 10px 0px;          /* Add padding: 0 pixels on top and bottom, 10 pixels on left and right */
-            text-align-last: left;      /* Align the last line of text to the left */
-            display: flex;              /* Use flexbox layout for the footer content */
-            justify-content: space-between; /* Distribute space between child elements, aligning them at both ends */
-            align-items: flex-start;    /* Align child elements to the top of the container */
+            background-color: #1a371e; /* Background color of the footer */
+            padding: 20px; /* Padding around the footer content */
+            text-align: center; /* Center-align text in the footer */
+            color: #ffffff; /* Text color */
         }
 
-            .contact-info {
-                text-align: left;
-            }
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items to the left */
+        }
 
-            .footer-content {
-                text-align-last: right;
-            }
+        footer section {
+            margin-bottom: 20px; /* Space between sections */
+        }
 
-            .social-links {
-                margin-top: 20px; /* Adjust as needed */
-            }
+        .contact-info {
+            width: 100%;
+            text-align: left; /* Align contact info to the left */
+        }
 
-            .social-links a {
-                margin-right: 10px; /* Adjust as needed */
-            }
+        .social-links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align social links and privacy policy */
+        }
 
-        /* Social links styling */
+        .social-links h2 {
+            margin-bottom: 10px; /* Space between heading and links */
+        }
+
         .social-links a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
+            margin-bottom: 10px; /* Space between each social link */
+        }
+
+        .privacypolicy {
+            width: 100%;
+            text-align: center; /* Center-align privacy policy */
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: right; /* Align copyright to the right */
+            margin-top: auto; /* Push to the bottom */
+        }
+
+        /* Text and link styling */
+        footer p, footer h2, footer a {
+            color: #ffffff; /* Text and link color */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        /* Flexbox layout for larger screens */
+        @media (min-width: 768px) {
+            footer .container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start; /* Align items to the left */
+            }
+            .social-links {
+                align-items: center; /* Center align social links and privacy policy */
+            }
+            .privacy-policy {
+                align-self: center; /* Center align privacy policy */
+            }
+            .copyright {
+                align-self: flex-end; /* Align copyright to bottom right */
+                text-align: right; /* Align text to the right */
+            }
         }
 
     
@@ -599,35 +642,36 @@
 
     <!-- Footer section -->
     <footer>
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="contact-info">
-                    <!-- Contact section content -->
-                    <h2>Contact Us</h2>
-                    <p>Have any questions or need assistance? Feel free to reach out to us at:</p>
-                    <p>Email: modernsaintmeditation1221@gmail.com</p>
-                    <p>Phone: +91 8285904395</p>
-                    <p>Address: Najafgarh, Delhi, India</p>
-                </div>
-            </div>
-        </section>
         <div class="container">
-            <div class="footer-content">
-                <!-- Footer content -->
-                <p>&copy; 2023 Modern Saint Meditation. All Rights Reserved.</p>
+            <section class="contact-info">
+                <!-- Contact section content -->
+                <h2>Contact Us</h2>
+                <p>Have any questions or need assistance?</p>
+                <p>Feel free to reach out to us at:</p>
+                <p>Email: modernsaintmeditation1221@gmail.com</p>
+                <p>Phone: +91 8285904395</p>
+                <p>Address: Najafgarh, Delhi, India</p>
+            </section>
+            <section class="social-links">
                 <!-- Social media links -->
-                <div class="social-links">
-                    <a href="https://www.facebook.com/modernsaintmed/" title="Follow us on Facebook">Facebook</a>
-                    <a href="https://www.youtube.com/@ModernSaintMeditation1001" title="Follow us on Twitter">Youtube</a>
-                    <a href="https://www.instagram.com/modernsaintmeditation/" title="Follow us on Instagram">Instagram</a>
-                </div>
-                <!-- Image link -->
+                <h2>Follow Us</h2>
+                <a href="https://www.facebook.com/modernsaintmed/" title="Follow us on Facebook">Facebook</a>
+                <a href="https://www.youtube.com/@ModernSaintMeditation1001" title="Follow us on Youtube">Youtube</a>
+                <a href="https://www.instagram.com/modernsaintmeditation/" title="Follow us on Instagram">Instagram</a>
+
+                <main>
+                <h2>Privacy Policy</h2>
+                <a href="privacy-policy.html" class="HlWMPX" aria-label="Privacy">Privacy Policy</a>
                 
-                <img src="static/HDlogo.jpg" style="width:10%">
-            </div>
+                </main>
+            
         </div>
+        <!-- Copyright content -->
+        <section class="copyright">
+            <p>&copy; 2023 Modern Saint Meditation. All Rights Reserved.</p>
+        </section>
     </footer>
-   
+
 
     </body>
     </html>
