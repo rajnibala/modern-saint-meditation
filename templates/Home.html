@@ -458,22 +458,36 @@
             color: #000000; /* Black text color */
             word-wrap: break-word; /* Ensure text wraps inside the box */
             word-spacing: 1px; /* Adjust word spacing */
-            text-align: left; /* Left-align text */                              
+            text-align: left; /* Left-align text */
         }
-        /* Ensure modal text is black */
+
         .modal-content {
             color: #000000; /* Set all text inside the modal to black */
         }
 
         /* Additional styling for specific text elements inside the modal to ensure black text */
         .modal-content h2,
-        .modal-content h3,
-        .modal-content h4,
         .modal-content p,
         .modal-content a {
             color: #000000; /* Set headers, paragraphs, and links inside the modal to black */
         }
-      
+
+        /* Set minimum line spacing for paragraphs */
+        .modal-content p {
+            line-height: calc(1em + 1.5px); /* Line height with added margin */
+            margin: 0; /* Remove default margins */
+        }
+
+        /* Decrease the margin below the heading */
+        .modal-content h2 {
+            line-height: calc(1em + 1.5px); /* Line height with added margin */
+            margin: 0; /* Remove default margins */
+        }
+        .modal-content h1 {
+            line-height: calc(1em + 1.5px); /* Line height with added margin */
+            margin: 0; /* Remove default margins */
+        }
+
 
         .close {
             color: #000000; /* Black text color */
@@ -488,7 +502,31 @@
             text-decoration: none; /* No underline */
             cursor: pointer; /* Pointer cursor */
         }
+       
+        /* Style for the checkbox and label */
+        #agreeCheckbox {
+            margin-top: 20px;
+        }
 
+        #agreeCheckbox + label {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 16px;
+        }
+
+        /* Style for the error message */
+        #error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .modal-content {
+                width: 90%; /* Adjust width for small screens */
+                padding: 15px; /* Adjust padding for small screens */
+            }
+        }
 
     </style>
 
@@ -735,7 +773,8 @@
                     <div id="myModal" class="modal">
                         <div class="modal-content">
 <section>
-                                <h2>Privacy Policy for modernsaintmeditation</h2>
+          <span class="close" id="closeBtn">&times;</span>
+                                <h2>Privacy Policy for Modern Saint Meditation</h2>
                                 <p>At modernsaintmeditation, accessible from modernsaintmeditation.in, we prioritize the privacy of our visitors. This Privacy Policy document outlines the types of information collected and recorded by modernsaintmeditation and how we use it.</p>
                                 <p>If you have additional questions or need more information about our Privacy Policy, please contact us.</p>
                                 <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website concerning information shared and/or collected at modernsaintmeditation. It does not apply to any offline information or data collected through channels other than this website.</p>
@@ -800,50 +839,38 @@
                                     <li>Upon review, we will notify you of the approval or rejection of your refund.</li>
                                     <li>If approved, your refund will be processed within 7-10 business days.</li>
                                 </ul>
-                                <h2>Non-refundable Items</h2>
-                                <ul>
-                                    <li>Monthly subscription packages are non-refundable.</li>
-                                </ul>
-                                <p>If you have questions about our refund policy, please contact us at modernsaintmeditation1221@gmail.com.</p>
-    <h2>Terms and Conditions</h2>
+                                <h1>Non-refundable Items</h1>
+        <p>Monthly subscription packages are non-refundable.</p>
+    <p>If you have questions about our refund policy, please contact us at modernsaintmeditation1221@gmail.com.</p>
+    <h1>Terms and Conditions</h1>
     <p>These terms and conditions outline the rules and regulations for the use of Modern saint Meditation's Website, located at https://www.modernsaintmeditation.in/ </p>
     <p>By accessing this website, we assume you accept these terms and conditions. Do not continue to use modernsaintmeditation if you do not agree to take all of the terms and conditions stated on this page.</p>
 
-    <ol>
-        <li>
-            <h1>License:</h1>
-            <ul>
-                <li>Unless otherwise stated, Modern saint Meditation and/or its licensors own the intellectual property rights for all material on Modern saint Meditation. All intellectual property rights are reserved. You may access this from Modern saint Meditation for your own personal use subjected to restrictions set in these terms and conditions.</li>
-            </ul>
-        </li>
-        <li>
-            <h1>User Content:</h1>
-            <ul>
-                <li>You must not republish material from Modern Saint Meditation.</li>
-                <li>You must not sell, rent, or sub-license material from modern saint meditation.</li>
-                <li>You must not reproduce, duplicate or copy material from modern saint meditation.</li>
-                <li>This Agreement shall begin on the date hereof.</li>
-            </ul>
-        </li>
-        <li>
-            <h1>User Accounts:</h1>
-            <ul>
-                <li>If you create an account on our website, you are responsible for maintaining the security of your account and you are fully responsible for all activities that occur under the account and any other actions taken in connection with it.</li>
-            </ul>
-        </li>
-        <li>
-            <h1>Termination:</h1>
-            <ul>
-                <li>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</li>
-            </ul>
-        </li>
-        <li>
-            <h1>Governing Law:</h1>
-            <ul>
-                <li>These Terms shall be governed and construed in accordance with the laws of Delhi/India, without regard to its conflict of law provisions.</li>
-            </ul>
-        </li>
-    </ol>          <span class="close">&times;</span>
+    
+    <h1>License:</h1>
+        <p>Unless otherwise stated, Modern Saint Meditation and/or its licensors own the intellectual property rights for all material on Modern Saint Meditation. All intellectual property rights are reserved. You may access this from Modern Saint Meditation for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+        <h1>User Content:</h1>
+        <p>You must not republish material from Modern Saint Meditation.</p>
+        <p>You must not sell, rent, or sub-license material from Modern Saint Meditation.</p>
+        <p>You must not reproduce, duplicate or copy material from Modern Saint Meditation.</p>
+        <p>This Agreement shall begin on the date hereof.</p>
+
+        <h1>User Accounts:</h1>
+        <p>If you create an account on our website, you are responsible for maintaining the security of your account and you are fully responsible for all activities that occur under the account and any other actions taken in connection with it.</p>
+
+        <h1>Termination:</h1>
+        <p>We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+
+        <h1>Governing Law:</h1>
+        <p>These Terms shall be governed and construed in accordance with the laws of Delhi/India, without regard to its conflict of law provisions.</p>
+    <!-- Checkbox for agreeing to terms and conditions -->
+            <input type="checkbox" id="agreeCheckbox">
+            <label for="agreeCheckbox">I Agree</label>
+            <p id="error-message" style="color:red; display:none;">You must agree to the terms and conditions.</p>
+        </div>
+    </div>
+
 
                         </div>
                     </div>
@@ -947,5 +974,25 @@
         }
     }
 
+    // Additional code for the terms and conditions pop-up
+    document.getElementById('agreeCheckbox').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('error-message').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    });
+
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        if (!document.getElementById('agreeCheckbox').checked) {
+            document.getElementById('error-message').style.display = 'block';
+        } else {
+            document.getElementById('popup').style.display = 'none';
+        }
+    });
+
+    // Optionally, you can open the modal automatically for demonstration
+    window.onload = function() {
+        document.getElementById('popup').style.display = 'block';
+    };
 </script>
 
